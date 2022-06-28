@@ -6,17 +6,21 @@ import src.sly_functions as f
 import src.sly_globals as g
 
 
-from pydantic import BaseModel
+from pydantic import BaseModel, create_model
 
 
-class Item(BaseModel):
+class InferenceImageIdItem(BaseModel):
     inference_image_id: int
 
 
+class RequestStateItem(BaseModel):
+    state: InferenceImageIdItem = None
+
+
 @g.app.post('/test-request-recommended/')
-async def test_request_recommended(inference_item: Item):
+async def test_request_recommended(inference_item: RequestStateItem):
     logger.info(f"{test_request_recommended.__name__} received a message")
-    logger.info(f'{inference_item.inference_image_id=}')
+    logger.info(f'{inference_item.state.inference_image_id=}')
     return {'status_code': 200, 'data': 'OK'}
 
 
