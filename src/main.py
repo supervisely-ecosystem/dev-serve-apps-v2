@@ -13,6 +13,6 @@ logger.info("Application has been started")
 def test_request(request: Request):
     logger.info("Test request received")
     print(request)
-    return "Test request received"
+    return {'status_code': 200, 'data': 'OK'}
 
 
