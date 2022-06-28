@@ -16,9 +16,5 @@
     "icon_cover": true,
 
     "headless": true,
-    "instance_version": "6.4.45",
-
-    "context_menu": {
-        "target": ["images_project"]
-    }
+    "instance_version": "6.4.45"
 }
