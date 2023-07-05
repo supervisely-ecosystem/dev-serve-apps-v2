@@ -11,7 +11,7 @@
   "port": 8000,
   "task_location": "application_sessions",
   "icon_background": "#FFFFFF",
-  "icon": "https://imgur.com/a9u0M3Y.png",
+  "icon": "https://github.com/supervisely-ecosystem/dev-serve-apps-v2/assets/48245050/a275d0ae-0680-48e1-8b20-057a29e74308",
   "icon_cover": true,
   "headless": true,
   "instance_version": "6.4.45"
